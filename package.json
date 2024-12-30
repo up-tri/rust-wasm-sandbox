@@ -1,23 +1,19 @@
 {
   "name": "rust-wasm-sandbox",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "build": "tsc -p tsconfig.build.json",
-    "lint": "npx @biomejs/biome lint --write .",
-    "format": "npx @biomejs/biome format --write .",
-    "test": "jest"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "private": true,
+  "workspaces": ["node-app"],
   "dependencies": {
     "typescript": "^5.7.2"
   },
   "devDependencies": {
     "@types/jest": "^29.5.14",
     "jest": "^29.7.0",
-    "ts-jest": "^29.2.5"
+    "rimraf": "^6.0.1",
+    "ts-jest": "^29.2.5",
+    "tsc-alias": "^1.8.10"
+  },
+  "scripts": {
+    "rust:clean": "rimraf node-app/src/lib/rust-wasm",
+    "rust:build": "wasm-pack build rust-wasm --target nodejs --out-dir ../node-app/src/wasm --out-name index --no-pack"
   }
 }

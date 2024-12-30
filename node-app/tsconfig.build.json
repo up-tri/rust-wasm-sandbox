@@ -3,6 +3,9 @@
   "exclude": [
     "node_modules",
     "dist",
-    "**/*.test.ts"
+    "rust-wasm",
+    "scripts",
+    "**/*.test.ts",
+    "jest.config.js"
   ]
 }

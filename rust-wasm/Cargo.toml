@@ -1,0 +1,14 @@
+[package]
+name = "rust-wasm"
+version = "0.1.0"
+edition = "2021"
+authors = ["up-tri <yaki-shake@up-tri.me>"]
+description = "sample project"
+license = "MIT"
+repository = "https://github.com/up-tri/rust-wasm-sandbox"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen = "0.2"

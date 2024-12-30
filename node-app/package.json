@@ -1,0 +1,12 @@
+{
+  "name": "rust-wasm-sandbox_node-app",
+  "private": true,
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json && tsc-alias",
+    "postbuild": "node scripts/copy-wasm.cjs",
+    "lint": "npx @biomejs/biome lint --write .",
+    "format": "npx @biomejs/biome format --write .",
+    "test": "jest"
+  }
+}

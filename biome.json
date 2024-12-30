@@ -7,7 +7,7 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "ignore": ["node_modules", "dist", "rust"]
+    "ignore": ["node-app/node_modules", "node-app/dist", "node-app/scripts", "node-app/src/wasm", "rust-wasm"]
   },
   "formatter": {
     "enabled": true,
